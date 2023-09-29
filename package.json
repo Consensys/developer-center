@@ -1,6 +1,7 @@
 {
   "name": "consensys-developer-center",
   "version": "0.0.0",
+  "license": "(MIT OR Apache-2.0)",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -12,7 +13,9 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@docusaurus/core": "3.0.0-beta.0",
@@ -24,8 +27,15 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@docusaurus/eslint-plugin": "3.0.0-beta.0",
     "@docusaurus/module-type-aliases": "3.0.0-beta.0",
     "@docusaurus/tsconfig": "3.0.0-beta.0",
+    "@lavamoat/allow-scripts": "^2.5.1",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-unused-imports": "^3.0.0",
     "typescript": "~5.2.2"
   },
   "browserslist": {
@@ -42,5 +52,11 @@
   },
   "engines": {
     "node": ">=16.14"
+  },
+  "lavamoat": {
+    "allowScripts": {
+      "@docusaurus/core>@babel/runtime-corejs3>core-js-pure": false,
+      "@docusaurus/core>core-js": false
+    }
   }
 }
