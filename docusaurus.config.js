@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'MetaMask Dev Portal',
+  title: 'ConsenSys Dev Center',
   tagline: 'All things MetaMask, Linea, Infura',
   favicon: 'img/favicon.ico',
 
